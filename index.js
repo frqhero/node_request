@@ -105,17 +105,4 @@ const barcodeArray = transformToBarcodeObjects(photoNames);
 const uniqueBarcodes = getUniqueBarcodes(barcodeArray);
 const objectToSend = { series: uniqueBarcodes };
 
-// makeRequest(objectToSend, (error, response) => {
-//   if (error) {
-//     console.error('Ошибка запроса:', error);
-//   } else {
-//     //console.log('Ответ сервера:', response);
-
-//     // Сопоставляем артикулы и обновляем массив barcodeArray
-//     mapArticulesToBarcodes(barcodeArray, response);
-
-//     console.log('Массив с артикулами:', barcodeArray);
-//   }
-// });
 makeRequest(objectToSend, my_func, barcodeArray)
-1
