@@ -57,11 +57,10 @@ async function main() {
   const directoryPath = "/Users/frqhero/Dev/node/node_request/photo";
   const photoNames = readPhotoFileNames(directoryPath);
   const barcodeArray = transformToBarcodeObjects(photoNames);
+
   const uniqueBarcodes = getUniqueBarcodes(barcodeArray);
   const objectToSend = { series: uniqueBarcodes };
-
   const responseResult = await getRequestPromise(objectToSend);
-  1;
 }
 
 main();
